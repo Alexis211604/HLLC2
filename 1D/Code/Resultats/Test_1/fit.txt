@@ -1,0 +1,13 @@
+set logscale xy
+set xlabel "log(dt)"
+set ylabel "log(erreur)
+
+set key outside
+
+
+set title "Ordre de convergence pour les 4 parametres, pour HLL"
+mc(x) = a*x+b
+fit mc(x) "erreur_Rusanov_ordre_2.txt" using (log($1)):(log($2)) via a,b
+
+plot "erreur_Rusanov_ordre_2.txt" using 1:2 title "erreur density" , exp(mc(log(x))) title sprintf("droite rho ordre %.3f", a)
+

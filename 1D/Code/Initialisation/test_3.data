@@ -1,0 +1,16 @@
+Temps_final
+0.012
+discontinuite
+0.5
+rho_left
+1.
+vitesse_gauche 
+0.
+pression_gauche 
+1000.
+rho_droite
+1.
+vitesse_droite
+0.
+pression_droite
+0.01
